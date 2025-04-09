@@ -5,27 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aniket Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/2ce6515424.js" crossorigin="anonymous"></script>
+    <!-- <style>
+        /* html {
+            scroll-behavior: smooth; /* Enables smooth scrolling */
+        } */
+    </style> -->
 </head>
 <body>
-    <div id="header">
+<div id="header">
     <div class="container">
-        <nav>
-            <img src="images/logo.png" alt="logo" class="logo">
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Service</a></li>
-                <li><a href="#">Portfolio</a></li>
-                <li><a href="#">Contact</a></li>
+        <nav class="navbar">
+            <img src="images/logo.png" alt="Company Logo" class="logo">
+            <ul id="sidemenu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Service</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <i class="fas fa-times" onclick="closemenu()"></i>
             </ul>
+            <i class="fas fa-bars" onclick="openmenu()"></i>
         </nav>
+        
         <div class="header-text">
             <p>Developer, Hacker</p>
             <h1>Hi, I'm <span>Aniket</span> <br>Deula from Ktm,tilganga</h1>
         </div>
     </div>
 </div>
+
+<!-- ..........about...................... -->
+ 
 <div id="about">
     <div class="container">
         <div class="row">
@@ -37,63 +49,37 @@
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum quidem obcaecati recusandae soluta nam, aliquid ipsam sequi, autem vitae mollitia alias praesentium voluptas accusantium iusto fugiat est quam corrupti nesciunt!
                 </p>
                 <div class="tab-titles">
-                    <p class="tab-links active-link" onclick="opentab('Skills')">Skills</p>
-                    <p class="tab-links" onclick="opentab('Experience')">Experience</p>
-                    <p class="tab-links" onclick="opentab('Education')">Education</p>
+                    <p data-target="Skills" class="tab-links active-link">Skills</p>
+                    <p data-target="Experience" class="tab-links">Experience</p>
+                    <p data-target="Education" class="tab-links">Education</p>
                 </div>
-                <div class="tab-contents active-tab" id="Skills">
-                    <ul>
-                        <li><span>Web Devlopment</span><br>Web Development</li>
-                        <li><span>Laravel Deveoper</span><br>Web Development</li>
-                        <li><span>Html,Css Devloper</span><br>Web Development</li>
-                    </ul>
-                </div>
-                <div class="tab-contents" id="Experience">
-                    <ul>
-                        <li><span>html,css</span><br>Web Development</li>
-                        <li><span>javascirpt,vuejs</span><br>Web Development</li>
-                        <li><span>laravel</span><br>Web Development</li>
-                    </ul>
-                </div>
-                <div class="tab-contents" id="Education">
-                    <ul>
-                        <li><span>SLC</span><br>Bridgewate Internetinal School</li>
-                        <li><span>+2</span><br>Univeresal College</li>
-                        <li><span>Bachelor</span><br>Goldengate Collge</li>
-                    </ul>
+                <div class="tab-slider">
+                    <div class="tab-contents active-tab" id="Skills">
+                        <ul>
+                            <li><span class="highlight-red">Web Devlopment</span><br>Web Development</li>
+                            <li><span class="highlight-red">Laravel Deveoper</span><br>Web Development</li>
+                            <li><span class="highlight-red">Html,Css Devloper</span><br>Web Development</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="Experience">
+                        <ul>
+                            <li><span class="highlight-red">html,css</span><br>Web Development</li>
+                            <li><span class="highlight-red">javascirpt,vuejs</span><br>Web Development</li>
+                            <li><span class="highlight-red">laravel</span><br>Web Development</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="Education">
+                        <ul>
+                            <li><span class="highlight-red">SLC</span><br>Bridgewater Internetinal School</li>
+                            <li><span class="highlight-red">+2</span><br>Univeresal College</li>
+                            <li><span class="highlight-red">Bachelor</span><br>Goldengate Collge</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
-
-<!-- .................services....................
- <div id="services">
-    <div class="container">
-        <h1 class="sub-title">My services</h1>
-            <div class="services-list">
-                <div>
-                    <h2>Web Development</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum ex architecto soluta natus. Nobis esse aliquam eaque, officia ipsa aut voluptatem labore, quo, facere numquam harum eos velit deleniti dicta!
-                    </p>
-                    <a href="#">Learn more</a>
-                </div>
-                <div>
-                    <h2>Hacker Aniket</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum ex architecto soluta natus. Nobis esse aliquam eaque, officia ipsa aut voluptatem labore, quo, facere numquam harum eos velit deleniti dicta!
-                    </p>
-                    <a href="#">Learn more</a>
-                </div>
-                <div>
-                    <h2>Undertaker</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum ex architecto soluta natus. Nobis esse aliquam eaque, officia ipsa aut voluptatem labore, quo, facere numquam harum eos velit deleniti dicta!
-                    </p>
-                    <a href="#">Learn more</a>
-                </div>
-            </div>
-        
-    </div>
- </div> -->
 
  <!-- .................services.................... -->
 <section id="services">
@@ -101,40 +87,206 @@
         <h1 class="sub-title">My Services</h1>
         <div class="services-list">
             <div class="service-item">
+                <i class="fas fa-code service-icon"></i>
                 <h2>Web Development</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum ex architecto soluta natus. Nobis esse aliquam eaque, officia ipsa aut voluptatem labore, quo, facere numquam harum eos velit deleniti dicta!</p>
                 <a href="#" aria-label="Learn more about Web Development">Learn more</a>
             </div>
             <div class="service-item">
+                <i class="fas fa-crop-alt"></i>
                 <h2>Hacker Aniket</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum ex architecto soluta natus. Nobis esse aliquam eaque, officia ipsa aut voluptatem labore, quo, facere numquam harum eos velit deleniti dicta!</p>
                 <a href="#" aria-label="Learn more about Hacking services">Learn more</a>
             </div>
             <div class="service-item">
+                <i class="fas fa-code service-icon"></i>
                 <h2>Undertaker</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum ex architecto soluta natus. Nobis esse aliquam eaque, officia ipsa aut voluptatem labore, quo, facere numquam harum eos velit deleniti dicta!</p>
                 <a href="#" aria-label="Learn more about Undertaker services">Learn more</a>
             </div>
         </div>
     </div>
+    
+    <!-- ..............portfolio............... -->
+
+ <div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Work</h1>
+    <div class="work-list">
+        <div class="work">
+            <img src="images/work-1.png">
+            <div class="layer">
+                <h3>Social Media App</h3>
+                <p>Ambition guru is an AI-driven ed-tech platform that guides learners to be the best at anything they desire. We aspire and motivate students of any age group in every possible way to achieve their innate potential.</p>
+                <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+            </div>
+        </div>
+        <div class="work">
+            <img src="images/work-2.png">
+            <div class="layer">
+                <h3>Gaming</h3>
+                <p>Ambition guru is an AI-driven ed-tech platform that guides learners to be the best at anything they desire. We aspire and motivate students of any age group in every possible way to achieve their innate potential.</p>
+                <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+            </div>
+        </div>
+        <div class="work">
+            <img src="images/work-3.png">
+            <div class="layer">
+            <h4>React</h4>
+            <p>Ambition guru is an AI-driven ed-tech platform that guides learners to be the best at anything they desire. We aspire and motivate students of any age group in every possible way to achieve their innate potential.</p>
+                <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+            </div>
+        </div>
+    </div>
+    <a href="#" class="btn">See More</a>
+    </div>
+</div>   
+
+<!-- .............contact................... -->
+
+<div id="contact">
+    <div class="conainer">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact me</h1>
+                <p>contact@example.com</p>
+                <p>1233789732809</p>
+               
+                <div class="social-icons">
+                    <a href="https://facebook.com/" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-twitter-square"></i>
+                    </a>
+                    <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </div>
+                
+                <a href="" class="btn btn2">Download CV</a>
+            </div>
+            <div class="contact-right">
+                <form action="">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="text" name="email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright @ Aniket. Made with <i class="fas fa-heart"></i> By Aniket Deula </p>
+    </div>
+</div>
+
+    <!-- <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+    
+        function opentab(tabname) {
+            for (let tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (let tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script> -->
+    <!-- <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+    
+        function opentab(event, tabname) {
+            for (let tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (let tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    
+        // Attach event listeners
+        document.getElementById("tab-skills").addEventListener("click", function (event) {
+            opentab(event, "Skills");
+        });
+        document.getElementById("tab-experience").addEventListener("click", function (event) {
+            opentab(event, "Experience");
+        });
+        document.getElementById("tab-education").addEventListener("click", function (event) {
+            opentab(event, "Education");
+        });
+    </script> -->
+    <script>
+        var tablinks = document.querySelectorAll(".tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        var currentTab = 0; // Keeps track of the current active tab
+    
+        function opentab(event, tabname) {
+            for (let tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (let tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab", "prev-tab");
+            }
+    
+            // Find index of the clicked tab
+            let clickedIndex = Array.from(tablinks).indexOf(event.currentTarget);
+    
+            // Add sliding direction
+            if (clickedIndex > currentTab) {
+                tabcontents[currentTab].classList.add("prev-tab"); // Slide out left
+            }
+    
+            currentTab = clickedIndex; // Update current tab index
+    
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+
+        tablinks.forEach(tablink => {
+            tablink.addEventListener('click', function (event) {
+                const elementId = event.target.dataset.target;
+                opentab(event, elementId);
+            });
+        });
+    
+        // Attach event listeners
+        // document.getElementById("tab-skills").addEventListener("click", function (event) {
+        //     opentab(event, "Skills");
+        // });
+        // document.getElementById("tab-experience").addEventListener("click", function (event) {
+        //     opentab(event, "Experience");
+        // });
+        // document.getElementById("tab-education").addEventListener("click", function (event) {
+        //     opentab(event, "Education");
+        // });
+    </script>
+<script>
+    var sidemeu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemeu.style.right = "0";
+    }
+    function closemenu(){
+        sidemeu.style.right = "-200px";
+    }
+
+</script>
+
 </section>
 
 
-<script>
-    var tablinks = document.getElementsByClassName("tab-links");
-    var tabcontents = document.getElementsByClassName("tab-contents");
 
-    function opentab(tabname) {
-        for (let tablink of tablinks) {
-            tablink.classList.remove("active-link");
-        }
-        for (let tabcontent of tabcontents) {
-            tabcontent.classList.remove("active-tab");
-        }
-        event.currentTarget.classList.add("active-link");
-        document.getElementById(tabname).classList.add("active-tab");
-    }
-</script>
 
 </body>
 </html>
+
